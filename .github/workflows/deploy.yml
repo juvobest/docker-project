@@ -23,9 +23,10 @@ jobs:
         run: |
           ssh-keyscan -H 52.91.8.31 >> ~/.ssh/known_hosts
 
-      - name: Deploy to EC2
+      - name: Deploy full project to EC2
         run: |
-          scp -r -i ~/.ssh/id_rsa ./app ec2-user@52.91.8.31:~/app
+          ssh -i ~/.ssh/id_rsa ec2-user@52.91.8.31 'rm -rf ~/app'
+          scp -r -i ~/.ssh/id_rsa . ec2-user@52.91.8.31:~/app
           ssh -i ~/.ssh/id_rsa ec2-user@52.91.8.31 << 'EOF'
             cd ~/app
             docker stop webapp || true
