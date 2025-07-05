@@ -1,9 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My EC2 App</title>
+    <meta charset="UTF-8">
+    <title>My Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-    <h1>Hello from Dockerized Flask App on EC2!</h1>
+    <header>
+        <h1>Welcome to My Flask App</h1>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h2>A Simple Yet Powerful Flask Application</h2>
+            <p>This app is built with Flask, Docker, and Terraform for cloud deployment.</p>
+            <a href="/start" class="btn-primary">Get Started</a>
+        </section>
+
+        <section class="features">
+            <h3>Features</h3>
+            <ul>
+                <li>✔️ Modular Flask structure</li>
+                <li>✔️ Dockerized for easy deployment</li>
+                <li>✔️ CI/CD with GitHub Actions</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Flask App. All rights reserved.</p>
+    </footer>
 </body>
 </html>
