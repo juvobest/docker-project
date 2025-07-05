@@ -1,0 +1,20 @@
+# Ignore Terraform state
+*.tfstate
+*.tfstate.backup
+.terraform/
+crash.log
+*.tfvars
+*.tfvars.json
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore provider binaries
+*.exe
+*.zip
+*.tar.gz
+*.tgz
+
+# Ignore sensitive or system files
+*.pem
+*.key
+*.log
